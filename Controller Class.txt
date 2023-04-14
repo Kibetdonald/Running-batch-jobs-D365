@@ -1,0 +1,43 @@
+class DataCleanupBatchJobController extends RunBaseBatchController
+{
+    DataCleanupContract contract;
+
+    public static void main(Args _args)
+    {
+        DataCleanupBatchJobController controller = new DataCleanupBatchJobController();
+        controller.start(false);
+    }
+
+    protected void init()
+    {
+        super();
+        // Initialize any necessary variables or objects here
+    }
+
+    public boolean start()
+    {
+        return super();
+    }
+
+    public void run()
+    {
+        DataCleanupService::cleanupOldData(contract.cutoffDate);
+    }
+
+    protected void end()
+    {
+        super();
+        // Perform any necessary cleanup or logging here
+    }
+
+    public boolean pack(DataCleanupContract _contract)
+    {
+        this.contract = _contract;
+        return super();
+    }
+
+    public DataCleanupContract unpack()
+    {
+        return this.contract;
+    }
+}

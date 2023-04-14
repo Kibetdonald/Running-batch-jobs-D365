@@ -1,0 +1,8 @@
+public class DataCleanupService
+{
+    public static void cleanupOldData(DateTime cutoffDate)
+    {
+        // Perform data cleanup logic here using the cutoffDate parameter
+        // For example, you could delete all sales orders older than the cutoffDate
+    }
+}

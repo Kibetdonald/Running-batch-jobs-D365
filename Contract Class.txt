@@ -1,0 +1,6 @@
+[DataContractAttribute]
+public class DataCleanupContract
+{
+    [DataMemberAttribute]
+    public DateTime cutoffDate { get; set; }
+}
